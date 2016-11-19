@@ -18,7 +18,7 @@ run: $(TARGET)
 	./$(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CPP) $(CFLAGS) $^ -o $@ $(LDFLAGS)
+	$(CPP) $(CFLAGS) $^ -o $@ $(LDFLAGS) -Llib -lwebsockets
 
 $(OBJS): | $(OBJDIR)
 $(OBJDIR):
